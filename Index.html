@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asma Maddouri - Matériel Informatique</title>
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f1ff;
+    color: #29243b;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(112, 69, 197, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+nav a {
+    text-decoration: none;
+    color: #7045c5;
+    font-weight: bold;
+    font-size: 15px;
+}
+nav a:hover {
+    color: #50308f;
+}
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px 18px;
+    text-align: center;
+}
+h1 {
+    color: #7045c5;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.subtitle {
+    font-size: 17px;
+    color: #5a5278;
+    margin-top: 0;
+}
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 22px;
+    margin-top: 22px;
+    box-shadow: 0 8px 25px rgba(112, 69, 197, 0.12);
+}
+h2 {
+    color: #7045c5;
+    margin-top: 0;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+    text-align: left;
+}
+.product-card {
+    background: #faf8ff;
+    border: 1px solid #e4d9ff;
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.badge {
+    display: inline-block;
+    background: #ede5ff;
+    color: #7045c5;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+.product-card h3 {
+    margin: 4px 0 6px 0;
+    color: #29243b;
+    font-size: 18px;
+}
+.product-card p {
+    margin: 0 0 12px 0;
+    color: #5a5278;
+    font-size: 14px;
+}
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7045c5;
+    margin-bottom: 12px;
+}
+.btn-order {
+    background: #7045c5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+.btn-order:hover {
+    background: #50308f;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #d5c9f2;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+}
+textarea {
+    height: 110px;
+    resize: vertical;
+}
+.btn-submit {
+    background: #7045c5;
+    color: white;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-submit:hover {
+    background: #50308f;
+}
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #6b6387;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#produits">Produits</a>
+    <a href="#catalogues">Catalogues</a>
+    <a href="#commander">Commander</a>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Matériel Informatique</h1>
+        <p class="subtitle">Vente d'équipements et accessoires informatiques — Asma Maddouri</p>
+    </header>
+
+    <div class="card" id="produits">
+        <h2>Nos Produits</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div>
+                    <span class="badge">Disponible</span>
+                    <h3>Produit 1 (ex: Clavier / Souris)</h3>
+                    <p>Description courte, marque ou caractéristiques.</p>
+                </div>
+                <div>
+                    <div class="price">00 DT</div>
+                    <button class="btn-order" onclick="commanderProduit('Produit 1 (ex: Clavier / Souris)')">Commander</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <span class="badge">Disponible</span>
+                    <h3>Produit 2 (ex: Casque / SSD)</h3>
+                    <p>Description courte, marque ou caractéristiques.</p>
+                </div>
+                <div>
+                    <div class="price">00 DT</div>
+                    <button class="btn-order" onclick="commanderProduit('Produit 2 (ex: Casque / SSD)')">Commander</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <span class="badge">Disponible</span>
+                    <h3>Produit 3 (ex: PC Portable / Accessoire)</h3>
+                    <p>Description courte, marque ou caractéristiques.</p>
+                </div>
+                <div>
+                    <div class="price">00 DT</div>
+                    <button class="btn-order" onclick="commanderProduit('Produit 3 (ex: PC Portable / Accessoire)')">Commander</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="catalogues">
+        <h2>Catalogues</h2>
+        <p>Téléchargez ou consultez nos catalogues complets :</p>
+        <p>
+            <a href="catalogue1.pdf" target="_blank">Catalogue Matériel PDF</a>
+        </p>
+    </div>
+
+    <div class="card" id="commander">
+        <h2>Passer une commande</h2>
+        <form action="https://formspree.io/f/moedpwvg" method="POST">
+            <input type="text" name="nom" placeholder="Votre nom et prénom" required>
+            <input type="text" name="telephone_ou_email" placeholder="Votre numéro de téléphone ou email" required>
+            <input type="text" name="ville" placeholder="Votre ville / adresse">
+            <textarea id="champ-message" name="commande" placeholder="Précisez le produit, la quantité et vos remarques..." required></textarea>
+            <button type="submit" class="btn-submit">Envoyer la commande</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    © 2026 Asma Maddouri — Matériel Informatique
+</footer>
+
+<script>
+function commanderProduit(nomProduit) {
+    const champ = document.getElementById("champ-message");
+    champ.value = "Bonjour, je souhaite commander : " + nomProduit + " (Quantité : 1)";
+    document.getElementById("commander").scrollIntoView({ behavior: "smooth" });
+    champ.focus();
+}
+</script>
+
+</body>
+</html>
