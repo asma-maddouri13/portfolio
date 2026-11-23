@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Portfolio</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f1ff;
+    color: #29243b;
+    text-align: center;
+    padding: 30px;
+}
+h1, h2 {
+    color: #7045c5;
+}
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    margin-top: 30px;
+    box-shadow: 0 8px 25px rgba(112, 69, 197, 0.15);
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+textarea {
+    height: 120px;
+}
+button {
+    background: #7045c5;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #50308f;
+}
+@media (max-width: 600px) {
+    body { padding: 15px; }
+    h1 { font-size: 25px; }
+    .card { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<h1>Bienvenue sur mon site !</h1>
+
+<div class="card">
+    <h2>À propos de moi</h2>
+    <p>Bienvenue dans mon portfolio personnel.</p>
+
+    <h2>Mes compétences</h2>
+    <p>Informatique - HTML - CSS</p>
+
+    <h2>Mes projets</h2>
+    <p>Découvrez mes réalisations.</p>
+
+    <form action="https://formspree.io/f/moedpwvg" method="POST">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+
+</body>
+</html>
